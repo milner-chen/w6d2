@@ -13,10 +13,15 @@ class SQLObject
 
   def self.table_name=(table_name)
     # ...
+    # table_name
+    @table_name = table_name
+    # @table_name = "#{self}".tableize
   end
 
   def self.table_name
     # ...
+    # "#{self}".tableize
+    "#{self}".tableize
   end
 
   def self.all
@@ -33,6 +38,11 @@ class SQLObject
 
   def initialize(params = {})
     # ...
+    @table_name
+    #"#{self}".tableize
+    # params.each do |key, value|
+      
+    # end
   end
 
   def attributes
